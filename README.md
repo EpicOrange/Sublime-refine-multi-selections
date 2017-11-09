@@ -6,10 +6,10 @@ Sublime plugin for selecting the edges of selected text
 1. Copy this file to `Preferences -> Browse Packages... -> User`
 2. Add the following to `Preferences -> Key Bindings...`
 
-    { "keys": ["ctrl+k", "ctrl+s"], "command": "select_selection_edges" },
+        { "keys": ["ctrl+k", "ctrl+s"], "command": "select_selection_edges" },
 
-    // For OSX
-    { "keys": ["super+k", "super+s"], "command": "select_selection_edges" },
+        // For OSX
+        { "keys": ["super+k", "super+s"], "command": "select_selection_edges" },
 
 # Example
 
