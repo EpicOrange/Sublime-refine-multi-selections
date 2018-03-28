@@ -1,0 +1,8 @@
+[
+    { "keys": ["super+k", "super+s"], "command": "select_selection_edges" },
+    { "keys": ["super+k", "super+shift+s"], "command": "undo_select_selection_edges" },
+    { "keys": ["super+k", "super+f"], "command": "flip_selections" },
+    { "keys": ["super+k", "super+e"], "command": "orient_selections" },
+    { "keys": ["super+alt+backspace"], "command": "delete_every_other_selection" },
+    { "keys": ["super+i"], "command": "invert_selection_in_line" }
+]
