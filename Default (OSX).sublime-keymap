@@ -4,5 +4,6 @@
     { "keys": ["super+k", "super+f"], "command": "flip_selections" },
     { "keys": ["super+k", "super+e"], "command": "orient_selections" },
     { "keys": ["super+alt+backspace"], "command": "delete_every_other_selection" },
-    { "keys": ["super+i"], "command": "invert_selection_in_line" }
+    { "keys": ["super+i"], "command": "invert_selection_in_line" },
+    { "keys": ["super+k", "super+="], "command": "seq_on_selections" }
 ]

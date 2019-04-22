@@ -7,8 +7,10 @@ Sublime plugin adding a few commands for acting on selected regions.
 - FlipSelections (cmd-k cmd-f): flips active edges of selections
 - OrientSelections (cmd-k cmd-e): makes active edge the right edge
 - DeleteEveryOtherSelection (cmd-alt-backspace): delete every other selection
-  - WIP: pressing again will retain every 3[, 4, 5, ...] selections
+  + WIP: pressing again will retain every 3[, 4, 5, ...] selections
 - InvertSelectionInLine (cmd-i): invert selection, bounded by selected lines
+- SeqOnSelections (cmd-k cmd-=): if the first selection is a natural number, replaces all selections with increasing values starting from the first selection
+  + for example, ["3" "" "" ""] => ["3" "4" "5" "6"]
 
 ![example](https://user-images.githubusercontent.com/6273197/32586484-a0a425da-c4b7-11e7-9970-bdaa2bfb7898.gif)
 
@@ -20,6 +22,7 @@ Sublime plugin adding a few commands for acting on selected regions.
     { "keys": ["super+k", "super+e"], "command": "orient_selections" },
     { "keys": ["super+alt+backspace"], "command": "delete_every_other_selection" },
     { "keys": ["super+i"], "command": "invert_selection_in_line" }
+    { "keys": ["super+k", "super+="], "command": "seq_on_selections" }
 
 
 ## Installing

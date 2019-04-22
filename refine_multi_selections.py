@@ -55,7 +55,6 @@ class OrientSelectionsCommand(sublime_plugin.TextCommand):
 # todo: pressing again retains every third selection instead (making use of soft undo)
 class DeleteEveryOtherSelectionCommand(sublime_plugin.TextCommand):
     def run(self, edit):
-        print("hi")
         for region in sorted(self.view.sel())[1::2]:
             self.view.sel().subtract(region)
 
@@ -86,3 +85,16 @@ class InvertSelectionInLineCommand(sublime_plugin.TextCommand):
         result = region_difference_all(covered_lines, selections)
         selections.clear()
         selections.add_all(result)
+
+# default: cmd-k cmd-=
+class SeqOnSelectionsCommand(sublime_plugin.TextCommand):
+    def run(self, edit):
+        selections = self.view.sel()
+        # Check if first selection is a positive int
+        firstSelectionText = self.view.substr(selections[0])
+        if firstSelectionText.isdigit():
+            start = int(firstSelectionText)
+            for i, region in enumerate(selections):
+                self.view.replace(edit, region, str(start + i))
+
+
